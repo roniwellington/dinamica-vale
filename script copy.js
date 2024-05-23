@@ -3,17 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const bins = document.querySelectorAll('.bin');
     const message = document.getElementById('message');
     const scoreDisplay = document.getElementById('score');
-    const finalMessageOverlay = document.getElementById('final-message-overlay');
-    const finalMessage = document.getElementById('final-message');
     let score = 0;
     const pointsPerCorrect = 20; // Pontos por acerto
     let attemptCount = 0; // Contagem de tentativas (independentemente do acerto)
-
-    // Carrega os arquivos de áudio
-    const audioErro = new Audio('sound/erro.mp3');
-    const audioPonto = new Audio('sound/ponto.mp3');
-    const audioParabens = new Audio('soun/parabens.mp3');
-    const audioTrilha = new Audio('sound/trilha.mp3');
 
     items.forEach(item => {
         item.addEventListener('dragstart', dragStart);
@@ -52,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
             message.style.backgroundColor = 'green';
             message.style.padding = '10px';
             message.style.borderRadius = '10px';
-            audioPonto.play();
         } else {
             item.classList.add('incorrect');
             message.textContent = 'Você errou';
@@ -60,7 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
             message.style.backgroundColor = 'red';
             message.style.padding = '10px';
             message.style.borderRadius = '10px';
-            audioErro.play();
         }
 
         scoreDisplay.textContent = `Pontuação: ${score}`;
@@ -72,16 +62,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function displayFinalMessage() {
-        if (score >= 70) {
-            finalMessage.textContent = `Parabéns, você fez ${score} pontos!`;
-            audioTrilha.play();
-            audioTrilha.addEventListener('ended', () => {
-                audioParabens.play();
-            });
+        if (score >= 90) {
+            message.textContent = 'Parabéns, você é uma pessoa incrível!';
+        } else if (score >= 70) {
+            message.textContent = `Parabéns você fez ${score} pontos, está indo bem mas pode melhorar`;
         } else {
-            finalMessage.textContent = `Você fez abaixo de 70 pontos, precisa melhorar.`;
-            audioTrilha.play();
+            message.textContent = `Você fez abaixo de 70 pontos, precisa melhorar`;
         }
-        finalMessageOverlay.classList.remove('hidden');
     }
 });
