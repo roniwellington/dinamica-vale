@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bins, .items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.bin, .item {
+    margin: 10px;
+    text-align: center;
+    width: 120px; /* Define a mesma largura para lixeiras e itens */
+    height: 180px; /* Define a mesma altura para lixeiras e itens */
+}
+
+.bin img, .item img {
+    width: 100%; /* Faz a imagem ocupar 100% da largura do contêiner */
+    height: 100%; /* Faz a imagem ocupar 100% da altura do contêiner */
+    object-fit: contain; /* Mantém a proporção da imagem */
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#score {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.disabled {
+    pointer-events: none;
+}
+
+.correct {
+    opacity: 0.5;
+    border: 2px solid green;
+}
+
+.incorrect {
+    opacity: 0.5;
+    border: 2px solid red;
+}
