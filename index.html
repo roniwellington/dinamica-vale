@@ -9,44 +9,45 @@
 <body>
     <h3>RPO</h3>
     <h1>Jogo Meio Ambiente</h1>
+    <div id="message"></div>
+    <div id="score">Pontuação: 0</div>
     <div id="game-container">
         <div class="bins">
             <div class="bin" id="bin-plastico" data-type="plástico">
                 <img src="images/lixeira-vermelha.png" alt="Lixeira Vermelha">
-                <p>Plástico</p>
+                <!--<span class="bin-label">Plástico</span>-->
             </div>
             <div class="bin" id="bin-papeis" data-type="papéis">
                 <img src="images/lixeira-azul.png" alt="Lixeira Azul">
-                <p>Papéis</p>
+                <!--<span class="bin-label">Papel</span>-->
             </div>
             <div class="bin" id="bin-metais" data-type="metais">
                 <img src="images/lixeira-amarela.png" alt="Lixeira Amarela">
-                <p>Metais</p>
+                <!--<span class="bin-label">Metal</span>-->
             </div>
             <div class="bin" id="bin-vidros" data-type="vidros">
                 <img src="images/lixeira-verde.png" alt="Lixeira Verde">
-                <p>Vidros</p>
+                <!-- <span class="bin-label">Vidro</span> -->
             </div>
             <div class="bin" id="bin-organicos" data-type="orgânicos">
                 <img src="images/lixeira-marrom.png" alt="Lixeira Marrom">
-                <p>Orgânicos</p>
+                <!-- <span class="bin-label">Orgânico</span> -->
             </div>
             <div class="bin" id="bin-nao-reciclaveis" data-type="não recicláveis">
                 <img src="images/lixeira-cinza.png" alt="Lixeira Cinza">
-                <p>Não Recicláveis</p>
+                <!-- <span class="bin-label">Não Reciclável</span> -->
             </div>
         </div>
         <div class="items">
             <img src="images/papel-amassado.png" alt="Papel Amassado" class="item" data-type="papéis" id="item-papel" draggable="true">
-            <img src="images/garrafa-plastico.png" alt="Garrafa de Plástico" class="item" data-type="plástico" id="item-garrafa" draggable="true">
             <img src="images/lata.png" alt="Lata" class="item" data-type="metais" id="item-lata" draggable="true">
-            <img src="images/garrafa-vidro.png" alt="Garrafa de Vidro" class="item" data-type="vidros" id="item-vidro" draggable="true">
-            <img src="images/casca-banana.png" alt="Casca de Banana" class="item" data-type="orgânicos" id="item-banana" draggable="true">
             <img src="images/papel-suja.png" alt="Papel Sujo" class="item" data-type="não recicláveis" id="item-papel-sujo" draggable="true">
+            <img src="images/garrafa-vidro.png" alt="Garrafa de Vidro" class="item" data-type="vidros" id="item-vidro" draggable="true">
+            <img src="images/garrafa-plastico.png" alt="Garrafa de Plástico" class="item" data-type="plástico" id="item-garrafa" draggable="true">
+            <img src="images/casca-banana.png" alt="Casca de Banana" class="item" data-type="orgânicos" id="item-banana" draggable="true">
         </div>
     </div>
-    <div id="message"></div>
-    <div id="score">Pontuação: 0</div>
+   
     <div id="final-message-overlay" class="hidden">
         <div id="final-message"></div>
     </div>
