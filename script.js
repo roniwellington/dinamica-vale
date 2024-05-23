@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function displayFinalMessage() {
         if (score >= 70) {
-            finalMessage.textContent = `Parabéns, você fez ${score} pontos!`;
+            finalMessage.textContent = `Parabéns, você fez ${score} pontos! você esta demais nesse joguinho`;
             audioTrilha.play();
             audioTrilha.addEventListener('ended', () => {
                 audioParabens.play();
