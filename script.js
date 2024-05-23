@@ -40,11 +40,17 @@ document.addEventListener('DOMContentLoaded', () => {
             score += pointsPerCorrect;
             item.classList.add('correct');
             message.textContent = 'Parabéns você acertou';
-            message.style.color = 'green';
+            message.style.color = 'white';
+            message.style.backgroundColor = 'green';
+            message.style.padding = '10px';
+            message.style.borderRadius = '10px';
         } else {
             item.classList.add('incorrect');
             message.textContent = 'Você errou';
-            message.style.color = 'red';
+            message.style.color = 'white';
+            message.style.backgroundColor = 'red';
+            message.style.padding = '10px';
+            message.style.borderRadius = '10px';
         }
 
         scoreDisplay.textContent = `Pontuação: ${score}`;
