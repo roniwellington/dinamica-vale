@@ -72,15 +72,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function displayFinalMessage() {
-        if (score >= 70) {
-            finalMessage.textContent = `Parabéns, você fez ${score} pontos! você esta demais nesse joguinho`;
+        if (score >= 120) {
+            finalMessage.textContent = `Parabéns, você fez ${score} pontos e atingiu a pontuação máxima! você esta demais nesse joguinho`;
             audioTrilha.play();
             audioTrilha.addEventListener('ended', () => {
                 audioParabens.play();
             });
-        } else {
-            finalMessage.textContent = `Você fez abaixo de 70 pontos, precisa melhorar.`;
+        } else if(score >= 70) {
+            finalMessage.textContent = `Parabéns, você fez ${score} pontos, mas ainda pode melhorar.`;
             audioTrilha.play();
+        } else {
+            finalMessage.textContent = `Você fez  ${score} pontos abaixo de 70, precisa melhorar.`;
         }
         finalMessageOverlay.classList.remove('hidden');
     }
