@@ -83,6 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
             audioTrilha.play();
         } else {
             finalMessage.textContent = `Você fez  ${score} pontos abaixo de 70, precisa melhorar.`;
+            audioTrilha.play();
         }
         finalMessageOverlay.classList.remove('hidden');
     }
