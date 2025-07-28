@@ -44,7 +44,7 @@ Com este projeto, pratiquei:
 
 ## 🖼️ Interface
 
-> *(Você pode adicionar um print do jogo aqui ou um GIF demonstrativo)*
+
 
 ---
 
